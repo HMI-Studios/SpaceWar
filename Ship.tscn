@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxwjx7nj7d2kv"]
+
+[ext_resource type="Texture2D" uid="uid://d2tatb8kagynx" path="res://assets/ship.png" id="1_ws6p3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwimd"]
+size = Vector2(32, 41)
+
+[node name="Player1" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fwimd")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = -1.5708
+texture = ExtResource("1_ws6p3")

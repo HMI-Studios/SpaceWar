@@ -69,6 +69,7 @@ stretch_mode = 5
 script = ExtResource("3_aorho")
 
 [node name="Settings" type="TextureButton" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3

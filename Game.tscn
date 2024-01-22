@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://du5o4oryxcsib"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1_5rqoq"]
+[ext_resource type="PackedScene" uid="uid://cxwjx7nj7d2kv" path="res://Ship.tscn" id="2_b2p07"]
+[ext_resource type="Script" path="res://Player1.gd" id="3_sqf3e"]
+[ext_resource type="Script" path="res://Player2.gd" id="4_vttru"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_5rqoq")
+
+[node name="Player1" parent="." instance=ExtResource("2_b2p07")]
+modulate = Color(0.411765, 0.827451, 0, 1)
+position = Vector2(60, 660)
+rotation = 1.5708
+script = ExtResource("3_sqf3e")
+
+[node name="Player2" parent="." instance=ExtResource("2_b2p07")]
+modulate = Color(0.870588, 0.152941, 0, 1)
+position = Vector2(900, 60)
+rotation = 4.71239
+script = ExtResource("4_vttru")

@@ -16,11 +16,13 @@ func _on_texture_rect_pressed():
 
 
 func _on_multiplayer_pressed():
-    pass # Replace with function body.
+    Global.is_multiplayer = true
+    get_tree().change_scene_to_file("res://Game.tscn")
 
 
 func _on_vsai_pressed():
-    pass # Replace with function body.
+    Global.is_multiplayer = false
+    get_tree().change_scene_to_file("res://Game.tscn")
 
 
 func _on_settings_pressed():
