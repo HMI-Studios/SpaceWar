@@ -9,3 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
     pass
+
+
+func _on_player_1_died():
+    pass # Replace with function body.
+
+
+func _on_player_2_died():
+    pass # Replace with function body.

@@ -23,3 +23,8 @@ rotation = -1.5708
 script = ExtResource("4_vttru")
 
 [node name="Torpedos" type="Node2D" parent="."]
+
+[node name="Debris" type="Node2D" parent="."]
+
+[connection signal="died" from="Ships/Player1" to="." method="_on_player_1_died"]
+[connection signal="died" from="Ships/Player2" to="." method="_on_player_2_died"]

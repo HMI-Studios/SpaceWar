@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://denfaio5asbsp"]
+
+[ext_resource type="Texture2D" uid="uid://b71mp6xxhb8d0" path="res://assets/debris.png" id="1_1doi4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45syo"]
+radius = 3.0
+height = 24.0
+
+[node name="Debris" type="RigidBody2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_45syo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_1doi4")

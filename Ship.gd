@@ -2,12 +2,16 @@ extends CharacterBody2D
 
 
 var Torpedo = preload('res://Torpedo.tscn')
+var Debris = preload('res://Debris.tscn')
 
 
 @export var speed = 1.5
 @export var turn_speed = 2
 var shoot_cooldown_time = 30
 var shoot_cooldown = 0
+
+
+signal died
         
         
 func fwd():
@@ -33,7 +37,16 @@ func shoot():
         
         
 func kill():
-    print("game over")
+    for i in range(10):
+        var debris = Debris.instantiate()
+        debris.position = position + Vector2(randf_range(-5, 5), randf_range(-5, 5))
+        debris.rotation = randi_range(0, 359)
+        debris.modulate = modulate
+        debris.apply_impulse(velocity * randf_range(0.9, 1.1))
+        shoot_cooldown = shoot_cooldown_time
+        get_node('/root/Game/Debris').add_child(debris)
+    queue_free()
+    died.emit()
 
 
 func _physics_process(delta):
