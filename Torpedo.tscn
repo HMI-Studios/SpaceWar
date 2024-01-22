@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bao6gm2honbiq"]
+
+[ext_resource type="Script" path="res://Torpedo.gd" id="1_36aeu"]
+[ext_resource type="Texture2D" uid="uid://djk6sbd54rx3o" path="res://assets/torpedo.png" id="1_oa02g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujyih"]
+radius = 5.0
+
+[node name="Torpedo" type="RigidBody2D"]
+max_contacts_reported = 1
+contact_monitor = true
+lock_rotation = true
+script = ExtResource("1_36aeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ujyih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oa02g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

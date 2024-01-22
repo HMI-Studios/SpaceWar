@@ -8,14 +8,18 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_5rqoq")
 
-[node name="Player1" parent="." instance=ExtResource("2_b2p07")]
+[node name="Ships" type="Node2D" parent="."]
+
+[node name="Player1" parent="Ships" instance=ExtResource("2_b2p07")]
 modulate = Color(0.411765, 0.827451, 0, 1)
 position = Vector2(60, 660)
 rotation = 1.5708
 script = ExtResource("3_sqf3e")
 
-[node name="Player2" parent="." instance=ExtResource("2_b2p07")]
+[node name="Player2" parent="Ships" instance=ExtResource("2_b2p07")]
 modulate = Color(0.870588, 0.152941, 0, 1)
 position = Vector2(900, 60)
-rotation = 4.71239
+rotation = -1.5708
 script = ExtResource("4_vttru")
+
+[node name="Torpedos" type="Node2D" parent="."]

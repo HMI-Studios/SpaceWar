@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwimd"]
 size = Vector2(32, 41)
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Ship" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
