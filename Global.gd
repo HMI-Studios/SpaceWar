@@ -1,6 +1,9 @@
 extends Node
 
+
 var is_multiplayer = false
+var torpedo_speed = 30
+var ai_aim_deadzone = deg_to_rad(4)
 
 
 func mod(a, b):

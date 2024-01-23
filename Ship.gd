@@ -29,7 +29,7 @@ func right(delta):
 func shoot():
     if shoot_cooldown == 0:
         var torpedo = Torpedo.instantiate()
-        torpedo.position = position + (Vector2(0, -1).rotated(rotation) * 30)
+        torpedo.position = position + (Vector2(0, -1).rotated(rotation) * Global.torpedo_speed)
         torpedo.modulate = modulate
         torpedo.apply_impulse((Vector2(0, -1).rotated(rotation) * 180) + velocity)
         shoot_cooldown = shoot_cooldown_time

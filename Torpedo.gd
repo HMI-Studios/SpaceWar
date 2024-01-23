@@ -4,10 +4,6 @@ extends RigidBody2D
 var lifetime = 170
 
 
-func _ready():
-    pass # Replace with function body.
-
-
 func _integrate_forces(delta):
     if position.x < 0 or position.x > 960:
         PhysicsServer2D.body_set_state(

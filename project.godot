@@ -73,6 +73,7 @@ player_2_shoot={
 [physics]
 
 2d/default_gravity=0.0
+2d/default_linear_damp=0.0
 
 [rendering]
 
