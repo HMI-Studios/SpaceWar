@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8vjve0ipo452"]
+[gd_scene load_steps=4 format=3 uid="uid://c8vjve0ipo452"]
 
 [ext_resource type="Texture2D" uid="uid://ddq54452c0cn8" path="res://assets/draw.png" id="1_ykiqw"]
+[ext_resource type="Texture2D" uid="uid://dv8nph5gk8hih" path="res://assets/return.png" id="2_63kqj"]
+[ext_resource type="Script" path="res://MainMenuBtn.gd" id="3_wk7rg"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,3 +17,26 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_ykiqw")
+
+[node name="Return" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -34.0
+offset_right = 143.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+texture_normal = ExtResource("2_63kqj")
+script = ExtResource("3_wk7rg")
+
+[connection signal="button_down" from="Return" to="Return" method="_on_button_down"]
+[connection signal="mouse_entered" from="Return" to="Return" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Return" to="Return" method="_on_mouse_exited"]
+[connection signal="pressed" from="Return" to="Return" method="_on_pressed"]
